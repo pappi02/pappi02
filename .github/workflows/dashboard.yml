@@ -1,0 +1,42 @@
+name: Profile dashboard
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # daily refresh
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/dashboard.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?palette=github-dark&color_snake=#D4FF24&color_dots=#0d1117,#0c2a5c,#1558C9,#4f86e8,#D4FF24
+            dist/snake-light.svg?color_snake=#1558C9&color_dots=#ebedf0,#c6d8f7,#7fa6eb,#3a74db,#1558C9
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: Update contribution snake
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  cards:
+    runs-on: ubuntu-latest
+    needs: snake
+    steps:
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: main
+          UTC_OFFSET: 3
