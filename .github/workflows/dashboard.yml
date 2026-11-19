@@ -2,16 +2,40 @@ name: Profile dashboard
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # daily refresh
+    - cron: "0 3 * * *"   # daily, 06:00 Nairobi
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [".github/workflows/dashboard.yml"]
+    paths: ["scripts/**", ".github/workflows/dashboard.yml"]
 
 permissions:
   contents: write
 
+concurrency:
+  group: dashboard
+  cancel-in-progress: true
+
 jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Build dashboard cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python scripts/build_dashboard.py
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || git commit -m "Refresh dashboard cards"
+          git push
+
   snake:
     runs-on: ubuntu-latest
     steps:
@@ -28,16 +52,3 @@ jobs:
           commit_message: Update contribution snake
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  cards:
-    runs-on: ubuntu-latest
-    needs: snake
-    steps:
-      - uses: actions/checkout@v4
-      - uses: vn7n24fzkq/github-profile-summary-cards@release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          USERNAME: ${{ github.repository_owner }}
-          BRANCH_NAME: main
-          UTC_OFFSET: 3

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="230" viewBox="0 0 495 230" role="img" aria-label="Languages across projects">
+<title>Languages across projects</title>
+<style>
+  .t { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; fill: #0A0F1E; }
+  .m { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif; fill: #5A6479; }
+  .mono { font-family: 'Cascadia Code', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
+  @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+  .rise { animation: rise .6s ease-out both; }
+  .grow { transform-box: fill-box; transform-origin: left; animation: grow .9s cubic-bezier(.2,.8,.2,1) both; }
+  .pulse { animation: pulse 2.2s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .rise, .grow, .pulse { animation: none; } }
+</style>
+<rect x="0.5" y="0.5" width="494" height="229" rx="18" fill="#F6F8FD" stroke="#DCE3F0"/>
+<text x="28" y="42" class="t" font-size="16" font-weight="700">Languages across projects</text>
+<clipPath id="bar"><rect x="28" y="60" width="439" height="10" rx="5"/></clipPath><g clip-path="url(#bar)" class="grow">
+<rect x="28.0" y="60" width="158.6" height="10" fill="#3178c6"/>
+<rect x="186.0" y="60" width="86.0" height="10" fill="#3572A5"/>
+<rect x="271.4" y="60" width="75.0" height="10" fill="#f1e05a"/>
+<rect x="345.9" y="60" width="60.3" height="10" fill="#663399"/>
+<rect x="405.6" y="60" width="54.0" height="10" fill="#e34c26"/>
+<rect x="459.0" y="60" width="7.4" height="10" fill="#4A76B8"/>
+</g>
+<g class="rise" style="animation-delay:0.20s"><circle cx="34" cy="99" r="5" fill="#3178c6"/><text x="48" y="104" class="t" font-size="14" font-weight="600">TypeScript</text><text x="232" y="104" text-anchor="end" class="m mono" font-size="13">36.0%</text></g>
+<g class="rise" style="animation-delay:0.26s"><circle cx="260" cy="99" r="5" fill="#3572A5"/><text x="274" y="104" class="t" font-size="14" font-weight="600">Python</text><text x="458" y="104" text-anchor="end" class="m mono" font-size="13">19.5%</text></g>
+<g class="rise" style="animation-delay:0.32s"><circle cx="34" cy="129" r="5" fill="#f1e05a"/><text x="48" y="134" class="t" font-size="14" font-weight="600">JavaScript</text><text x="232" y="134" text-anchor="end" class="m mono" font-size="13">17.0%</text></g>
+<g class="rise" style="animation-delay:0.38s"><circle cx="260" cy="129" r="5" fill="#663399"/><text x="274" y="134" class="t" font-size="14" font-weight="600">CSS</text><text x="458" y="134" text-anchor="end" class="m mono" font-size="13">13.6%</text></g>
+<g class="rise" style="animation-delay:0.44s"><circle cx="34" cy="159" r="5" fill="#e34c26"/><text x="48" y="164" class="t" font-size="14" font-weight="600">HTML</text><text x="232" y="164" text-anchor="end" class="m mono" font-size="13">12.2%</text></g>
+<g class="rise" style="animation-delay:0.50s"><circle cx="260" cy="159" r="5" fill="#4A76B8"/><text x="274" y="164" class="t" font-size="14" font-weight="600">MQL5</text><text x="458" y="164" text-anchor="end" class="m mono" font-size="13">1.6%</text></g>
+<text x="28" y="206" class="m" font-size="11">Averaged per project, so no single repo dominates · excludes build tooling</text>
+</svg>
