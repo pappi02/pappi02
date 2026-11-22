@@ -15,17 +15,17 @@
 <rect x="0.5" y="0.5" width="494" height="229" rx="18" fill="#F6F8FD" stroke="#DCE3F0"/>
 <text x="28" y="42" class="t" font-size="16" font-weight="700">Languages across projects</text>
 <clipPath id="bar"><rect x="28" y="60" width="439" height="10" rx="5"/></clipPath><g clip-path="url(#bar)" class="grow">
-<rect x="28.0" y="60" width="152.5" height="10" fill="#3178c6"/>
-<rect x="179.9" y="60" width="86.3" height="10" fill="#3572A5"/>
-<rect x="265.6" y="60" width="77.9" height="10" fill="#f1e05a"/>
-<rect x="342.9" y="60" width="63.5" height="10" fill="#663399"/>
+<rect x="28.0" y="60" width="151.6" height="10" fill="#3178c6"/>
+<rect x="179.0" y="60" width="86.3" height="10" fill="#3572A5"/>
+<rect x="264.7" y="60" width="78.7" height="10" fill="#f1e05a"/>
+<rect x="342.8" y="60" width="63.6" height="10" fill="#663399"/>
 <rect x="405.8" y="60" width="53.1" height="10" fill="#e34c26"/>
 <rect x="458.3" y="60" width="7.9" height="10" fill="#4A76B8"/>
 </g>
-<g class="rise" style="animation-delay:0.20s"><circle cx="34" cy="99" r="5" fill="#3178c6"/><text x="48" y="104" class="t" font-size="14" font-weight="600">TypeScript</text><text x="232" y="104" text-anchor="end" class="m mono" font-size="13">34.6%</text></g>
+<g class="rise" style="animation-delay:0.20s"><circle cx="34" cy="99" r="5" fill="#3178c6"/><text x="48" y="104" class="t" font-size="14" font-weight="600">TypeScript</text><text x="232" y="104" text-anchor="end" class="m mono" font-size="13">34.4%</text></g>
 <g class="rise" style="animation-delay:0.26s"><circle cx="260" cy="99" r="5" fill="#3572A5"/><text x="274" y="104" class="t" font-size="14" font-weight="600">Python</text><text x="458" y="104" text-anchor="end" class="m mono" font-size="13">19.5%</text></g>
-<g class="rise" style="animation-delay:0.32s"><circle cx="34" cy="129" r="5" fill="#f1e05a"/><text x="48" y="134" class="t" font-size="14" font-weight="600">JavaScript</text><text x="232" y="134" text-anchor="end" class="m mono" font-size="13">17.6%</text></g>
-<g class="rise" style="animation-delay:0.38s"><circle cx="260" cy="129" r="5" fill="#663399"/><text x="274" y="134" class="t" font-size="14" font-weight="600">CSS</text><text x="458" y="134" text-anchor="end" class="m mono" font-size="13">14.3%</text></g>
+<g class="rise" style="animation-delay:0.32s"><circle cx="34" cy="129" r="5" fill="#f1e05a"/><text x="48" y="134" class="t" font-size="14" font-weight="600">JavaScript</text><text x="232" y="134" text-anchor="end" class="m mono" font-size="13">17.8%</text></g>
+<g class="rise" style="animation-delay:0.38s"><circle cx="260" cy="129" r="5" fill="#663399"/><text x="274" y="134" class="t" font-size="14" font-weight="600">CSS</text><text x="458" y="134" text-anchor="end" class="m mono" font-size="13">14.4%</text></g>
 <g class="rise" style="animation-delay:0.44s"><circle cx="34" cy="159" r="5" fill="#e34c26"/><text x="48" y="164" class="t" font-size="14" font-weight="600">HTML</text><text x="232" y="164" text-anchor="end" class="m mono" font-size="13">12.0%</text></g>
 <g class="rise" style="animation-delay:0.50s"><circle cx="260" cy="159" r="5" fill="#4A76B8"/><text x="274" y="164" class="t" font-size="14" font-weight="600">MQL5</text><text x="458" y="164" text-anchor="end" class="m mono" font-size="13">1.7%</text></g>
 <text x="28" y="206" class="m" font-size="11">Averaged per project, so no single repo dominates · excludes build tooling</text>
